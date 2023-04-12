@@ -1,0 +1,107 @@
+{
+	"rules": {
+    "dataVideos": {
+      ".indexOn" : ["id","videoUrl"],
+      ".read" : true, 
+      "$uid": {
+        ".write": "$uid === auth.uid",
+        ".read" : true,
+      ".indexOn" : ["id","videoUrl"],
+      }
+    },
+      
+      "usuarios": {
+      	".read": true,
+        ".write": true,
+      	"$user_id": {
+        // grants write access to the owner of this user account
+        // whose uid must exactly match the key ($user_id)
+        ".write": "$user_id === auth.uid"
+      }
+    },
+        "peliculas": {
+      ".indexOn" : ["id","videoUrl"],
+      ".read" : true, 
+      "$uid": {
+        ".write": "$uid === auth.uid",
+        ".read" : true,
+      ".indexOn" : ["id","videoUrl"],
+      }
+    },
+      
+ 
+         "empleados": {
+      	".read": true,
+        ".write": true,
+      	"$user_id": {
+        ".write": "$user_id === auth.uid"
+      }
+    },
+      
+      "notificacion":{
+        ".read":true,
+          ".write":true,
+            
+      },
+  
+}
+
+
+}
+
+
+
+
+
+
+// ss
+{
+	"rules": {
+    "dataVideos": {
+      ".indexOn" : ["id","videoUrl"],
+      ".read" : true, 
+      "$uid": {
+        ".write": "$uid === auth.uid",
+        ".read" : true,
+      ".indexOn" : ["id","videoUrl"],
+      }
+    },
+      
+      "usuarios": {
+      	".read": true,
+        ".write": true,
+      	"$user_id": {
+        // grants write access to the owner of this user account
+        // whose uid must exactly match the key ($user_id)
+        ".write": "$user_id === auth.uid"
+      }
+    },
+        "peliculas": {
+      ".indexOn" : ["id","videoUrl"],
+      ".read" : true, 
+      "$uid": {
+        ".write": "$uid === auth.uid",
+        ".read" : true,
+      ".indexOn" : ["id","videoUrl"],
+      }
+    },
+      
+  }
+    
+         "empleados": {
+      	".read": true,
+        ".write": true,
+      	"$user_id": {
+        // grants write access to the owner of this user account
+        // whose uid must exactly match the key ($user_id)
+        ".write": "$user_id === auth.uid"
+      }
+    },
+      
+      "notificacion":{
+        ".read":true,
+          ".write":true,
+            
+      },
+  }
+}

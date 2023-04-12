@@ -1,21 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect, useRef } from "react";
+import { AppState } from "react-native";
+import Providers from "./componentes/Navigation/Index";
+import CargarRegursos from "./utils/CargarRecursos";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const App = () => {
+  const seCargo = CargarRegursos();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  if (!seCargo) {
+    return null;
+  } else {
+    return <Providers />;
+  }
+};
+
+export default App;
+
+// import {useFonts} from 'expo-font';
+// const [loaded] = useFonts({
+//   KufamSemiBoldItalic: require('./assets/fonts/Kufam-SemiBoldItalic.ttf'),
+//   LatoBold: require('./assets/fonts/Lato-Bold.ttf'),
+//   LatoBoldItalic: require('./assets/fonts/Lato-BoldItalic.ttf'),
+//   LatoItalic: require('./assets/fonts/Lato-Italic.ttf'),
+//   LatoRegular: require('./assets/fonts/Lato-Regular.ttf'),
+// });
+// if (!loaded) {
+//   console.log('>App>No cargo fonts');
+//   return null;
+// }
