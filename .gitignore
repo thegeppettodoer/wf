@@ -77,16 +77,18 @@ buck-out/
 /ios/Pods/
 
 # Expo
-.expo/*
-web-build/
 ./mywf.apk
-./x.expo.expo-shared/*
-./xcache/*
-./-android
-./_______node_modules/*
-./_.expo/*
-./_ios/*
-./_node_modules/*
+
+
+# .expo/*
+# web-build/
+# ./x.expo.expo-shared/*
+# ./xcache/*
+# ./-android
+# ./_______node_modules/*
+# ./_.expo/*
+# ./_ios/*
+# ./_node_modules/*
 
 
 
